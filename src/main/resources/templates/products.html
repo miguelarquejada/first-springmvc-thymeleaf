@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Todos os produtos</title>
+</head>
+<body>
+    <main id="products-page">
+        <h1>Lista de todos os produtos</h1>
+
+        <table>
+            <theade>
+                <tr>
+                    <th>id</th>
+                    <th>nome</th>
+                    <th>preço</th>
+                    <th>ações</th>
+                </tr>
+            </theade>
+            <tbody>
+                <tr th:if="${products.isEmpty()}">
+                    <td colspan="4">Nenhum produto cadastrado</td>
+                </tr>
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.getId()}"></td>
+                    <td th:text="${product.getName()}"></td>
+                    <td th:text="${product.getPrice()}"></td>
+                    <td>
+                        <a th:href="@{'/editar/' + ${product.getId()}}" class="btn-action btn-edit">editar</a>
+                        <a th:href="@{'/deletar/' + ${product.getId()}}" class="btn-action btn-del">deletar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a class="btn-action" href="/novo">novo produto</a>
+    </main>
+</body>
+</html>

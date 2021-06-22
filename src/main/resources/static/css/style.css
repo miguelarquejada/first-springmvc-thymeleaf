@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    color: black;
+}
+
+#products-page, #edit-page, #new-page {
+    margin: 50px;
+}
+
+/* product page */
+
+
+#products-page h1, #edit-page h1, #new-page h1 {
+    font-weight: 900;
+    color: #1450c4;
+    margin-bottom: 20px;
+}
+
+#products-page table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#products-page th {
+    color: white;
+    font-weight: 700;
+    background-color: #1450c4;
+}
+
+#products-page th, td {
+    padding: 10px;
+    border: 1px solid #a5a5a5;
+}
+
+#products-page .btn-edit {
+    background-color: #ffc91d;
+}
+
+#products-page .btn-del {
+    background-color: #f17070;
+}
+
+.btn-action {
+    border: 0;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #d2d3e9;
+}
+
+#products-page > a {
+    display: inline-block;
+    background-color: #66e389;
+    margin-top: 30px;
+}
+
+#new-page > form > input, #edit-page > form > input {
+    padding: 10px;
+    width: 200px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #d2d3e9;
+}
+
+#new-page > form > button, #edit-page > form > button {
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #66e389;
+}
+

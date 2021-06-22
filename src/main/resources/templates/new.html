@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Novo produto</title>
+</head>
+<body>
+  <main id="new-page">
+    <a class="btn-action" href="/produtos">voltar</a>
+    <h1>Novo produto</h1>
+    <form th:action="@{/novo}" th:object="${product}" method="post">
+      <input th:field="*{name}" type="text" placeholder="Nome...">
+      <input th:field="*{price}" type="text" placeholder="Preço...">
+      <button>Salvar</button>
+    </form>
+  </main>
+</body>
+</html>
